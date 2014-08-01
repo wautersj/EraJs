@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Era.Js</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="description" content="Meet EraJs. A library that helps you to estimate how long an era of time is occupied. It takes weekends, half days, vacation and hollidays into account when calculating.">
+    <meta name="keywords" content="JavaScript, Estimate, Era, Calculator">
+    <meta name="author" content="Joeri Wauters">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="archive/Era-0.1.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 100;
+
+        text-align: center;
+      }
+
+      #container {
+        padding: 50px;
+        max-width: 500px;
+        margin: 0px auto;
+      }
+
+      h1 {
+        font-size: 55px;
+      }
+
+      span.now {
+        color: #C4C4C4;
+      }
+
+      div.part {
+        padding-bottom: 40px;
+      }
+
+      div.introduction {
+        max-width: 400px;
+        margin: 0px auto;
+      }
+
+      div.part p {
+        margin-bottom: 4px;
+      }
+
+      div.code {
+        display: block;
+        border: 1px dotted #E5E3E3;
+        font-style: italic;
+        /*font-family: 'Georgia';*/
+        padding: 15px;
+        color: #5EAEC4;
+      }
+
+      div.code.return {
+        color: #DF9723;
+      }
+
+      div.code.interfering {
+        color: #D24343;
+      }
+
+      div.credits {
+        padding-top: 50px;
+      }
+
+      div.credits a{
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="part">
+        <h1>Era.js</h2>
+        <span class="now">Now: </span>
+      </div>
+
+      <div class="part introduction">
+        <p>Meet EraJs. A library that helps you to estimate how long an 
+          era of time is occupied. It takes weekends, half days, vacation 
+          and hollidays into account when calculating.</p>
+      </div>
+
+      <div class="part">
+        <p>Creating a new Era.</p>
+        <div class="code">
+            var myEra = new Era();
+        </div>
+      </div>
+
+      <div class="part">
+        <p>Adding estimated hours to your Era.</p>
+        <div class="code">
+            myEra.addHours(320);
+        </div>
+      </div>
+
+      <div class="part">
+        <p>Adding vacation days to your Era.</p>
+        <div class="code">
+            myEra.addVacationDays(2);
+        </div>
+      </div>
+
+      <div class="part">
+        <p>Requesting the end of your era.</p>
+        <div class="code">
+            myEra.end();
+        </div>
+      </div>
+
+       <div class="part">
+        <p>Calling the previous function will return the end of your Era.</p>
+        <div class="end code return"></div>
+      </div>
+
+      <div class="part">
+        <p>If there are hollidays interfering with your timeline, <br/>
+          they will be displayed in the list below.</p>
+        <div class="end code interfering"></div>
+      </div>
+
+      <div class="part credits">
+        <p><a href="http://www.twitter.com/wautersj" target="_blank">@Wautersj</p>
+      </div>
+    </div>
+  </body>
+</html>
