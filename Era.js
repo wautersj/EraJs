@@ -16,7 +16,20 @@ function Era(hpd,dpw) {
   //Always use the most recent representation
   //of the current moment in time.
   this.now = function() {
-    return new Date();
+    var n = new Date();
+    var day = (new Date()).getDay();
+    if(day>=6){
+      var dur = (new Date()).getTime();
+      dur += (7-(day-1))*1000*60*60*24; 
+      n = new Date(dur);
+    }
+    
+    n.setHours(0);
+    n.setMinutes(0);
+    n.setSeconds(0);
+    n.setMilliseconds(0);
+
+    return n;
   };
 
   this.addTask = function(_task, opt) {
@@ -172,6 +185,7 @@ function Era(hpd,dpw) {
     //console.log('bulk tasks to handle : ' + that._timeline.length + ' x Eratimes');
 
     var now = that.now().getTime();
+    console.log(now);
     var timeSaver = 0;
 
     for (var i = 0; that._timeline.length > 0 ; i) {
@@ -223,7 +237,8 @@ function Era(hpd,dpw) {
       day: Number(day),
       month: Number(month),
       year: Number(year),
-      timeline: that.timeline
+      timeline: that.timeline,
+      date: thenDate
     }
 
     return (that.timeline.length>0) ? response : null;
