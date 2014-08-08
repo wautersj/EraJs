@@ -23,7 +23,7 @@ function Era(hpd,dpw) {
       dur += (7-(day-1))*1000*60*60*24; 
       n = new Date(dur);
     }
-    
+
     n.setHours(0);
     n.setMinutes(0);
     n.setSeconds(0);
@@ -185,7 +185,6 @@ function Era(hpd,dpw) {
     //console.log('bulk tasks to handle : ' + that._timeline.length + ' x Eratimes');
 
     var now = that.now().getTime();
-    console.log(now);
     var timeSaver = 0;
 
     for (var i = 0; that._timeline.length > 0 ; i) {
