@@ -16,12 +16,6 @@ function init() {
   myEra = new Era();
 
   //load
-  $.getJSON(eraConfig.sources.tasks, function( data ) {
-    console.log('Tasks: ' +data.length);
-    nextSource();
-  });
-
-  //load
   $.getJSON(eraConfig.sources.holidays, function( data ) {
     console.log('Hollidays: ' +data.length);
     myEra.hollidays = data;
@@ -39,7 +33,7 @@ var sourcesLoaded=0;
 function nextSource() {
   sourcesLoaded++;
   //if load is complete, then start
-  if(sourcesLoaded==3) {
+  if(sourcesLoaded==2) {
     startDocs();
   }
 }
