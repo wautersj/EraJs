@@ -3,8 +3,8 @@ EraJs
 
 Time Calculation Javascript Library
 
-If you have 3 projects in the running that took a significant amount of time  
-and you wanted to know when these projects would be finished, what would you do?  
+When you have 3 projects in the running that take a significant amount of time  
+and you want to know when these projects would be finished, what would you do?  
 Oh and you have to take into account the weekends, vacation and holidays too ...
 
 This is where Era.js can be of use. It creates a timeline for you with all the  
